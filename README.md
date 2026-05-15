@@ -1,6 +1,6 @@
 ﻿# DVLD - Driver & Vehicle License Department System
 
-Comprehensive enterprise application for managing driving licenses, vehicle registrations, and related documentation.
+Comprehensive application for managing driving licenses, vehicle registrations, and related documentation.
 
 ## Architecture
 
@@ -42,19 +42,11 @@ DVLD/
   - Error logging through `clsLoggingData`
   - Global settings and configuration management
 
-## Implementation Details
-
-- `DVLD Presentation Layer` is a WinForms application targeting .NET Framework 4.7.2.
-- The entry point is `Configs\Program.cs`, which launches `frmLogin`.
-- `DVLD Buisness Layer` contains domain classes for licenses, drivers, applications, users, tests, and related business rules.
-- `DVLD DataAccess Layer` uses `System.Data.SqlClient` and stored procedures to read and write data to the `DVLD` SQL Server database.
-- The presentation layer references a custom control library: `WindowsFormsControlLibrary1.dll`.
-
 ## Technologies
 
 - .NET Framework 4.7.2
 - Windows Forms
-- ADO.NET / `System.Data.SqlClient`
+- ADO.NET
 - SQL Server
 - 3-tier architecture
 - C#
@@ -104,7 +96,3 @@ DVLD/
 - Database optimization
 - Proper indexing
 - Connection pooling
-
----
-
-This is a large, production-like system. Study each layer to understand enterprise architecture patterns.
