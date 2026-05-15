@@ -1,6 +1,6 @@
 # DVLD - Driver & Vehicle License Department System
 
-Comprehensive enterprise application for managing driving licenses, vehicle registrations, and related documentation.
+Comprehensive application for managing driving licenses, vehicle registrations, and related documentation.
 
 ## 📁 Architecture
 
