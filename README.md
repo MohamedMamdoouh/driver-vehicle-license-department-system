@@ -99,7 +99,3 @@ DVLD/
 - Database optimization
 - Proper indexing
 - Connection pooling
-
----
-
-This is a large, production-like system. Study each layer to understand enterprise architecture patterns.
