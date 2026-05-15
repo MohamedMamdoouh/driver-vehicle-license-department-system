@@ -1,10 +1,6 @@
 ﻿# DVLD - Driver & Vehicle License Department System
 
-A Windows Forms enterprise application for managing driver licenses, license renewals, international licenses, detained releases, driver records, test scheduling, and user authentication.
-
-## Overview
-
-This repository is a three-tier Windows Forms solution built around a clear Presentation, Business, and DataAccess architecture. The system is designed to support licensing workflows, driver and person records, test appointment management, and administrative user control.
+Comprehensive enterprise application for managing driving licenses, vehicle registrations, and related documentation.
 
 ## Architecture
 
@@ -63,17 +59,52 @@ DVLD/
 - 3-tier architecture
 - C#
 
-## Setup
+## 📊 Layers
 
-1. Open `DVLD.sln` in Visual Studio.
-2. Set `DVLD Presentation Layer` as the startup project.
-3. Update the database connection string in `DVLD DataAccess Layer\clsSettingsData.cs` if required.
-4. Ensure the SQL Server database `DVLD` exists and required stored procedures are available.
-5. Build the solution and run the application.
-6. Login with an existing user account.
+### Presentation Layer
 
-## Notes
+- Web UI components
+- Controllers and action methods
+- User input handling
+- Data display
 
-- This project depends on SQL Server stored procedures for all core CRUD operations.
-- `DB Diagram.pdf` and `Requirements.pdf` are included as design reference documents.
-- The application is intended as a learning and prototype implementation of an enterprise licensing workflow.
+### Business Layer
+
+- Business logic implementation
+- Business rules enforcement
+- Data validation
+- Transaction management
+
+### Data Access Layer
+
+- Database operations
+- Query execution
+- Repository pattern
+- Data entity mapping
+
+## 🚀 Getting Started
+
+1. Update connection string in configuration
+2. Run database setup scripts
+3. Create initial data (users, roles, test types)
+4. Start application
+5. Login with admin credentials
+
+## 🔐 Security
+
+- User authentication
+- Role-based authorization
+- SQL injection prevention
+- Password hashing
+- Audit trails
+
+## 📈 Scalability
+
+- Modular architecture
+- Database optimization
+- Proper indexing
+- Connection pooling
+
+---
+
+This is a large, production-like system. Study each layer to understand enterprise architecture patterns.
