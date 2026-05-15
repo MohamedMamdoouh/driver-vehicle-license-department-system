@@ -1,105 +1,79 @@
-# DVLD - Driver & Vehicle License Department System
+﻿# DVLD - Driver & Vehicle License Department System
 
-Comprehensive enterprise application for managing driving licenses, vehicle registrations, and related documentation.
+A Windows Forms enterprise application for managing driver licenses, license renewals, international licenses, detained releases, driver records, test scheduling, and user authentication.
 
-## 📁 Architecture
+## Overview
+
+This repository is a three-tier Windows Forms solution built around a clear Presentation, Business, and DataAccess architecture. The system is designed to support licensing workflows, driver and person records, test appointment management, and administrative user control.
+
+## Architecture
 
 ```
 DVLD/
-├── DVLD Presentation Layer/     - UI and user interaction
-├── DVLD Business Layer/         - Business logic and rules
-└── DVLD DataAccess Layer/       - Database operations
+├── DVLD Presentation Layer/     - WinForms UI, login, forms and user controls
+├── DVLD Buisness Layer/         - Business logic and domain objects
+└── DVLD DataAccess Layer/       - ADO.NET data access, SQL Server stored procedures
 ```
 
-## 🎯 Features
+## Main Modules
+
+- **Authentication & Users**
+  - Login form and role-aware access control
+  - User account management and credentials
+
+- **Driver & Person Management**
+  - Driver profile management
+  - Person details and contact information
+  - Driver license records linked to person entities
 
 - **License Management**
-  - License application and issuance
-  - License renewal and replacement
-  - License suspension and disqualification
-  - International license handling
+  - Local driving license issuance and renewal
+  - International license issuance
+  - License replacement for damaged or lost credentials
+  - Detained license release workflows
 
-- **Vehicle Management**
-  - Vehicle registration
-  - Vehicle ownership tracking
-  - Vehicle tests and inspections
+- **Application Workflows**
+  - License application processing
+  - Application type and status management
+  - Local and international license application forms
 
-- **User Management**
-  - User accounts and authentication
-  - Role-based access control
-  - Audit logging
+- **Tests & Appointments**
+  - Driving test scheduling and appointment tracking
+  - Written and practical test management
+  - Question bank support for exam preparation
 
-- **Testing & Appointments**
-  - Driving test scheduling
-  - Test result tracking
-  - Vision test management
-  - Written test management
-  - Practical test management
+- **Logging & Settings**
+  - Error logging through `clsLoggingData`
+  - Global settings and configuration management
 
-- **Documentation**
-  - Application handling
-  - Document generation
-  - Printing and archival
+## Implementation Details
 
-- **Reporting & Analytics**
-  - License statistics
-  - Application reports
-  - Fee tracking
+- `DVLD Presentation Layer` is a WinForms application targeting .NET Framework 4.7.2.
+- The entry point is `Configs\Program.cs`, which launches `frmLogin`.
+- `DVLD Buisness Layer` contains domain classes for licenses, drivers, applications, users, tests, and related business rules.
+- `DVLD DataAccess Layer` uses `System.Data.SqlClient` and stored procedures to read and write data to the `DVLD` SQL Server database.
+- The presentation layer references a custom control library: `WindowsFormsControlLibrary1.dll`.
 
-## 🛠️ Technologies
+## Technologies
 
-- ASP.NET Core MVC / Web API
-- Entity Framework Core
+- .NET Framework 4.7.2
+- Windows Forms
+- ADO.NET / `System.Data.SqlClient`
 - SQL Server
-- Three-tier architecture
+- 3-tier architecture
 - C#
 
-## 📊 Layers
+## Setup
 
-### Presentation Layer
+1. Open `DVLD.sln` in Visual Studio.
+2. Set `DVLD Presentation Layer` as the startup project.
+3. Update the database connection string in `DVLD DataAccess Layer\clsSettingsData.cs` if required.
+4. Ensure the SQL Server database `DVLD` exists and required stored procedures are available.
+5. Build the solution and run the application.
+6. Login with an existing user account.
 
-- Web UI components
-- Controllers and action methods
-- User input handling
-- Data display
+## Notes
 
-### Business Layer
-
-- Business logic implementation
-- Business rules enforcement
-- Data validation
-- Transaction management
-
-### Data Access Layer
-
-- Database operations
-- Query execution
-- Repository pattern
-- Data entity mapping
-
-## 🚀 Getting Started
-
-1. Update connection string in configuration
-2. Run database setup scripts
-3. Create initial data (users, roles, test types)
-4. Start application
-5. Login with admin credentials
-
-## 🔐 Security
-
-- User authentication
-- Role-based authorization
-- SQL injection prevention
-- Password hashing
-- Audit trails
-
-## 📈 Scalability
-
-- Modular architecture
-- Database optimization
-- Proper indexing
-- Connection pooling
-
----
-
-This is a large, production-like system. Study each layer to understand enterprise architecture patterns.
+- This project depends on SQL Server stored procedures for all core CRUD operations.
+- `DB Diagram.pdf` and `Requirements.pdf` are included as design reference documents.
+- The application is intended as a learning and prototype implementation of an enterprise licensing workflow.

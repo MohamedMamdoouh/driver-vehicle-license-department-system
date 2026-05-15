@@ -39,10 +39,6 @@ appsettings.Development.json
 *.ldf
 *.sqlproj.user
 
-# Generated documentation and diagrams
-DB Diagram.pdf
-Requirements.pdf
-
 # Runner and test output
 TestResults/
 
