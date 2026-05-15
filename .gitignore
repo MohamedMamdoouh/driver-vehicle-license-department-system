@@ -1,0 +1,54 @@
+﻿# Build output
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.nupkg
+*.snupkg
+*.cache
+
+# User-specific files
+*.csproj.user
+*.sln.user
+*.DotSettings.user
+
+# Rider
+.idea/
+*.sln.iml
+
+# VS Code
+.vscode/
+
+# NuGet
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# Environment files
+.env
+appsettings.Development.json
+
+# Database files
+*.db
+*.mdf
+*.ldf
+*.sqlproj.user
+
+# Generated documentation and diagrams
+DB Diagram.pdf
+Requirements.pdf
+
+# Runner and test output
+TestResults/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Application files
+*.log
